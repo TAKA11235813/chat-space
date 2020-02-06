@@ -6,8 +6,8 @@
 |------|----|-------|
 |body|text|null: false|
 |image|string|null: false|
-|gruop|references|null: false, foreign_key: true|
-|user|references|null: false, foreign_key: true|
+|gruop_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
