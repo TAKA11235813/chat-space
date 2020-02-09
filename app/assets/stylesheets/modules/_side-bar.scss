@@ -5,6 +5,27 @@
   &--username{
     background-color: #253141;
     height: 100px;
+    align-items: center;
+    display: flex;
+    .top__items{
+      background-color: #333333;
+      height: 20px;
+      width: 260px;
+      margin: 0 20px;
+      line-height: 20px;
+      display: flex;
+      justify-content: space-between;
+      &__name{
+        width:200px;
+      }
+      &--icons{
+        width: 60px;
+        height: 20px;
+        background-color: red;
+      }
+    }
   }
 }
+
+
 
