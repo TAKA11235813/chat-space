@@ -1,7 +1,25 @@
 .side__bar
   .side__bar--username
     .top__items
-      .top__items--name
+      %p.top__items--name
         taka
-      .top__items--icons
-  .side__bar--grouplist
+      %ul.top__items--icons
+        %li.top__items--icon
+          = link_to "#" do
+            = icon('fas', 'edit', class: 'strong')
+        %li.top__items--icon
+          = link_to "#" do
+            = icon('fas', 'cog', class: 'strong')
+  .side__bar--groups
+    %li.group-name
+      techcamp
+    %li.group-chat
+      まだメッセージがありません
+    %li.group-name
+      東京
+    %li.group-chat
+      まだメッセージがありません
+    %li.group-name
+      神奈川
+    %li.group-chat
+      まだメッセージがありません

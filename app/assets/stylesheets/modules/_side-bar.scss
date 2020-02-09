@@ -8,24 +8,43 @@
     align-items: center;
     display: flex;
     .top__items{
-      background-color: #333333;
+      color: white;
       height: 20px;
       width: 260px;
       margin: 0 20px;
       line-height: 20px;
       display: flex;
       justify-content: space-between;
-      &__name{
-        width:200px;
-      }
       &--icons{
-        width: 60px;
-        height: 20px;
-        background-color: red;
+        display: flex;
+        li {
+          margin-left: 5px;
+          a{
+            color: white;
+            text-decoration: none;
+          }
+        }
       }
     }
   }
-}
+  &--groups{
+    height: calc(100vh - 100px);
+    .group-name{
+      list-style: none;
+      color: white;
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 20px 5px 20px;
+    }
+    .group-chat{
+      color: white;
+      list-style: none;
+      font-size: 11px;
+      line-height: 11px;
+      margin: 0 20px;
+    }
 
+  }
+}
 
 
