@@ -1,0 +1,43 @@
+.chat__main
+  %ul.chat__main--groupinfo
+    %li.title
+      test
+      %p.member-name
+        Member : taka
+    %li.edit
+    = link_to "#" ,class: "edit-btn" do
+      Edit
+  .chat__main--messagelist
+    .member-name
+      %p.name
+        taka
+      %p.time
+        2020/02/02(Sun)20:20
+    %p.member-text
+      おはよう！
+    .member-name
+      %p.name
+        taka
+      %p.time
+        2020/02/02(Sun)20:20
+    %p.member-text
+      おはよう！
+    .member-name
+      %p.name
+        taka
+      %p.time
+        2020/02/02(Sun)20:20
+    %p.member-text
+      おはよう！
+
+  .chat__main--messageform
+    .main-header
+    .messages
+    .form
+      %form.new_message
+        .input-form
+          %input{type: "text", class: "input-form__text", placeholder: "type a message"}
+          %label{class: "input-form__image"}
+            = icon('fas', 'image')
+            %input{type: "file", class: "input-form__image__file"}
+        %input{type: "submit", class: "submit-btn"}
