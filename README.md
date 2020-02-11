@@ -21,8 +21,8 @@
 |email|string|null: false, unique: true|
 
 ### Association
-- has_many :groups, through: :groups_users
-- has_many :groups_users
+- has_many :groups, through: :group_users
+- has_many :group_users
 - has_many :messages
 
 ## groupsテーブル
@@ -32,11 +32,11 @@
 |name|string|null: false, unique: true|
 
 ### Association
-- has_many :users, through: :groups_users
-- has_many :groups_users
+- has_many :users, through: :group_users
+- has_many :group_users
 - has_many :messages
 
-## groups_usersテーブル
+## group_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
