@@ -1,11 +1,11 @@
 .chat__main
   %ul.chat__main--groupinfo
     %li.title
-      test
+      = @group.name
       %p.member-name
-        Member : taka
+        Member :  #{current_user.name}
     %li.edit
-    = link_to "#" ,class: "edit-btn" do
+    = link_to edit_group_path(@group) ,class: "edit-btn" do
       Edit
   .chat__main--messagelist
     .member-name
@@ -33,11 +33,13 @@
   .chat__main--messageform
     .main-header
     .messages
+      = render @messages
+
     .form
-      %form.new_message
-        .input-form
-          %input{type: "text", class: "input-form__text", placeholder: "type a message"}
-          %label{class: "input-form__image"}
-            = icon('fas', 'image')
-            %input{type: "file", class: "input-form__image__file"}
-        %input{type: "submit", class: "submit-btn"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'input-form', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'input-form' do
+            = icon('fas', 'image', class: 'input-form__image')
+            = f.file_field :image, class: 'input-form__image__file'
+        = f.submit 'Send', class: 'submit-btn'
